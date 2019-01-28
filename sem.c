@@ -27,8 +27,10 @@ void tasks(void)
 void taskOne(long arg)
 {
 	int i;
+	RTIME delay;
+	delay = nano2count(5);
 	for (i=0; i < ITER; i++){	
-		rt_sem_wait (&sem);
+		rt_sem_wait_timed (&sem,delay);
 		rt_printk("I am taskOne and global = %d................\n", ++global);
 		rt_sem_signal(&sem);
 	}

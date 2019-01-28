@@ -1,8 +1,8 @@
-cmd_/home/batch1/Desktop/rtosassgn/semaphore/day3b/sem.mod.o := gcc -Wp,-MD,/home/batch1/Desktop/rtosassgn/semaphore/day3b/.sem.mod.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/src/linux-build-3.4.67-rtai-4.0-aru/arch/x86/include -Iarch/x86/include/generated -Iinclude  -include /usr/src/linux-build-3.4.67-rtai-4.0-aru/include/linux/kconfig.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -m64 -march=core2 -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_FXSAVEQ=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(sem.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(sem)" -DMODULE  -c -o /home/batch1/Desktop/rtosassgn/semaphore/day3b/sem.mod.o /home/batch1/Desktop/rtosassgn/semaphore/day3b/sem.mod.c
+cmd_/home/batch1/Desktop/rtosassgn/semaphore/waituntill/sem.mod.o := gcc -Wp,-MD,/home/batch1/Desktop/rtosassgn/semaphore/waituntill/.sem.mod.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/src/linux-build-3.4.67-rtai-4.0-aru/arch/x86/include -Iarch/x86/include/generated -Iinclude  -include /usr/src/linux-build-3.4.67-rtai-4.0-aru/include/linux/kconfig.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -m64 -march=core2 -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_FXSAVEQ=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(sem.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(sem)" -DMODULE  -c -o /home/batch1/Desktop/rtosassgn/semaphore/waituntill/sem.mod.o /home/batch1/Desktop/rtosassgn/semaphore/waituntill/sem.mod.c
 
-source_/home/batch1/Desktop/rtosassgn/semaphore/day3b/sem.mod.o := /home/batch1/Desktop/rtosassgn/semaphore/day3b/sem.mod.c
+source_/home/batch1/Desktop/rtosassgn/semaphore/waituntill/sem.mod.o := /home/batch1/Desktop/rtosassgn/semaphore/waituntill/sem.mod.c
 
-deps_/home/batch1/Desktop/rtosassgn/semaphore/day3b/sem.mod.o := \
+deps_/home/batch1/Desktop/rtosassgn/semaphore/waituntill/sem.mod.o := \
     $(wildcard include/config/module/unload.h) \
   include/linux/module.h \
     $(wildcard include/config/sysfs.h) \
@@ -494,6 +494,6 @@ deps_/home/batch1/Desktop/rtosassgn/semaphore/day3b/sem.mod.o := \
   include/linux/vermagic.h \
   include/generated/utsrelease.h \
 
-/home/batch1/Desktop/rtosassgn/semaphore/day3b/sem.mod.o: $(deps_/home/batch1/Desktop/rtosassgn/semaphore/day3b/sem.mod.o)
+/home/batch1/Desktop/rtosassgn/semaphore/waituntill/sem.mod.o: $(deps_/home/batch1/Desktop/rtosassgn/semaphore/waituntill/sem.mod.o)
 
-$(deps_/home/batch1/Desktop/rtosassgn/semaphore/day3b/sem.mod.o):
+$(deps_/home/batch1/Desktop/rtosassgn/semaphore/waituntill/sem.mod.o):
