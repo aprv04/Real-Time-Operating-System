@@ -1,4 +1,5 @@
-obj-m		:= sem.o 
+
+obj-m		:= task.o 
 KERN_SRC	:= /lib/modules/$(shell uname -r)/build/
 PWD			:= $(shell pwd)
 
