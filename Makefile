@@ -1,5 +1,4 @@
-
-obj-m		:= mailbox.o 
+obj-m		:= sem.o 
 KERN_SRC	:= /lib/modules/$(shell uname -r)/build/
 PWD			:= $(shell pwd)
 
