@@ -18,6 +18,7 @@ MODULE_LICENSE("GPL");
 static RT_TASK t1;
 static RT_TASK t2;
 static MBX mbx1;
+static MBX mbx2;
 SEM sem;
 
 void taskOne(long arg);
@@ -38,19 +39,18 @@ void taskOne(long arg)
 {
 	char buff[BUFSIZE];
 	memset(buff,'\0',BUFSIZE);
-	rt_mbx_send_if(&mbx1,"Recieved Message from task1",strlen("Recieved Message from task1"));
+	rt_mbx_send_wp(&mbx1,"Recieved Message from task1",strlen("Recieved Message from task1"));
 	rt_sem_wait (&sem);
-	rt_mbx_receive_if(&mbx1,buff,40);
+	rt_mbx_receive_wp(&mbx2,buff,40);
 	rt_printk("TASK1 : %s\n",buff);
 }
 void taskTwo(long arg)
 {
 	char buff[BUFSIZE];
 	memset(buff,'\0',BUFSIZE);
-	rt_mbx_send_if(&mbx1,"Recieved Message from task2",strlen("Recieved Message from task2"));
-	rt_mbx_receive_if(&mbx1,buff,40);
+	rt_mbx_send_wp(&mbx2,"Recieved Message from task2",strlen("Recieved Message from task2"));
+	rt_mbx_receive_wp(&mbx1,buff,40);
 	rt_printk("TASK2 : %s\n",buff);
-	
 	rt_sem_signal(&sem);
 }
 int init_module(void)
@@ -60,6 +60,7 @@ int init_module(void)
 	start_rt_timer(1);
 	rt_typed_sem_init (&sem,0,BIN_SEM);
 	rt_typed_mbx_init(&mbx1,MAX_MESSAGES,FIFO_Q);
+	rt_typed_mbx_init(&mbx2,MAX_MESSAGES,FIFO_Q);
 	tasksinit();
 	taskresume();
 	return 0;
@@ -67,6 +68,7 @@ int init_module(void)
 void cleanup_module(void)
 {
 	rt_mbx_delete(&mbx1);
+	rt_mbx_delete(&mbx2);
 	rt_sem_delete(&sem);
 	stop_rt_timer();
 	return;
